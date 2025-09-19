@@ -1,17 +1,6 @@
 "use client";
 
-import {
-  BoxIcon,
-  Bus,
-  ContactIcon,
-  Group,
-  Home,
-  MessageCircle,
-  MessageCircleQuestion,
-  Settings2,
-  Ticket,
-  User,
-} from "lucide-react";
+import { Building2 } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
 import {
@@ -21,29 +10,11 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { useStatsStore } from "@/store/side.stats";
 import { NavMain } from "./nav-main";
 
 // This is sample data.
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const {
-    products,
-    categories,
-    reviews,
-    fetchStats,
-    orders,
-    coupons,
-    users,
-    boxes,
-    contacts,
-    banners,
-    faqs,
-  } = useStatsStore();
-
-  React.useEffect(() => {
-    fetchStats();
-  }, []);
   const data = {
     user: {
       name: "shadcn",
@@ -53,86 +24,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
     navMain: [
       {
-        title: "Dashboard",
-        url: "/dashboard?type=dashboard",
-        icon: Home,
-        type: "dashboard",
-      },
-      {
-        title: "Banners",
-        url: "/banner",
-        icon: Home,
-        type: "banners",
-        count: banners,
-      },
-      {
-        title: "Categories",
-        url: "/categories?type=categories&page=1",
-        icon: Group,
-        type: "categories",
-        count: categories,
-      },
-      {
-        title: "Products",
-        url: "/products?type=products&page=1",
-        icon: BoxIcon,
-        type: "products",
-        count: products,
-      },
-      {
-        title: "Coupons",
-        url: "/coupons?type=coupons&section=admin&page=1",
-        icon: Ticket,
-        type: "coupons",
-        count: coupons,
-      },
-      {
-        title: "Orders",
-        url: "/orders?type=orders&page=1",
-        icon: Bus,
-        type: "orders",
-        count: orders,
-      },
-      {
-        title: "Reviews",
-        url: "/reviews?type=reviews",
-        icon: MessageCircle,
-        type: "reviews",
-        count: reviews,
-      },
-      {
-        title: "Users",
-        url: "/users?type=users",
-        icon: User,
-        type: "users",
-        count: users,
-      },
-      {
-        title: "Boxes",
-        url: "/boxes?type=boxes",
-        icon: BoxIcon,
-        type: "boxes",
-        count: boxes,
-      },
-      {
-        title: "Contacts",
-        url: "/contact",
-        icon: ContactIcon,
-        type: "contacts",
-        count: contacts,
-      },
-      {
-        title: "FAQs",
-        url: "/faq",
-        icon: MessageCircleQuestion,
-        type: "faqs",
-        count: faqs,
-      },
-      {
-        title: "Config",
-        url: "/config?type=config",
-        icon: Settings2,
-        type: "config",
+        title: "Companies",
+        url: "/companies",
+        icon: Building2,
+        type: "companies",
       },
     ],
   };

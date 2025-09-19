@@ -33,11 +33,9 @@ export function NavMain({
           // Check if current route matches this item
           let isActive = false;
 
-          if (item.type === "contacts") {
+          if (item.type === "companies") {
             isActive =
-              pathname === "/contact" || pathname.startsWith("/contact");
-          } else if (item.type.toLowerCase() === "banners") {
-            isActive = pathname === "/banner" || pathname.startsWith("/banner");
+              pathname === "/companies" || pathname.startsWith("/companies");
           } else {
             isActive = type === item.type;
           }

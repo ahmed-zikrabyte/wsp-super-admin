@@ -50,7 +50,6 @@ export default function ConfirmationModal({
         return <AlertTriangle className="h-6 w-6 text-destructive" />;
       case "warning":
         return <AlertCircle className="h-6 w-6 text-yellow-500" />;
-      case "info":
       default:
         return <Info className="h-6 w-6 text-blue-500" />;
     }
@@ -62,7 +61,6 @@ export default function ConfirmationModal({
         return "destructive" as const;
       case "warning":
         return "default" as const;
-      case "info":
       default:
         return "default" as const;
     }
