@@ -1,6 +1,25 @@
 "use client";
 
-import { Building2, Home } from "lucide-react";
+import {
+  BarChart3,
+  Building2,
+  FileText,
+  FolderTree,
+  Gift,
+  Home,
+  Package,
+  Settings,
+  ShoppingCart,
+  Store,
+  Tags,
+  Truck,
+  User,
+  UserCheck,
+  UserCog,
+  Users,
+  Users2,
+  Video,
+} from "lucide-react";
 import * as React from "react";
 import {
   Sidebar,
@@ -35,6 +54,102 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         url: "/companies",
         icon: Building2,
         type: "companies",
+      },
+      {
+        title: "Company Admins",
+        url: "/company-admins",
+        icon: Users,
+        type: "company-admins",
+      },
+      {
+        title: "Brands",
+        url: "/brands",
+        icon: Tags,
+        type: "brands",
+      },
+      {
+        title: "Brand Admins",
+        url: "/brand-admins",
+        icon: UserCog,
+        type: "brand-admins",
+      },
+      {
+        title: "Stores",
+        url: "/stores",
+        icon: Store,
+        type: "stores",
+      },
+      {
+        title: "Store Managers",
+        url: "/store-managers",
+        icon: UserCheck,
+        type: "store-managers",
+      },
+      {
+        title: "Store Executives",
+        url: "/store-executives",
+        icon: User,
+        type: "store-executives",
+      },
+      {
+        title: "Categories",
+        url: "/categories",
+        icon: FolderTree,
+        type: "categories",
+      },
+      {
+        title: "Products",
+        url: "/products",
+        icon: Package,
+        type: "products",
+      },
+      {
+        title: "Orders",
+        url: "/orders",
+        icon: ShoppingCart,
+        type: "orders",
+      },
+      {
+        title: "Delivery Partners",
+        url: "/delivery-partners",
+        icon: Truck,
+        type: "delivery-partners",
+      },
+      {
+        title: "Users",
+        url: "/users",
+        icon: Users2,
+        type: "users",
+      },
+      {
+        title: "Revenue & Reports",
+        url: "/reports",
+        icon: BarChart3,
+        type: "reports",
+      },
+      {
+        title: "Video Calls & Chats",
+        url: "/interactions",
+        icon: Video,
+        type: "interactions",
+      },
+      {
+        title: "Promotions",
+        url: "/promotions",
+        icon: Gift,
+        type: "promotions",
+      },
+      {
+        title: "System Configs",
+        url: "/settings",
+        icon: Settings,
+        type: "settings",
+      },
+      {
+        title: "Audit Logs",
+        url: "/logs",
+        icon: FileText,
+        type: "logs",
       },
     ],
   };
