@@ -20,13 +20,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  type Company,
-  type CreateCompanyRequest,
-  createCompany,
-  type UpdateCompanyRequest,
-  updateCompany,
-} from "@/services/superAdminService";
+import { createCompany, updateCompany } from "@/services/superAdminService";
+import type {
+  Company,
+  CreateCompanyRequest,
+  UpdateCompanyRequest,
+} from "@/types/superAdmin.types";
 
 interface CompanyModalProps {
   isOpen: boolean;

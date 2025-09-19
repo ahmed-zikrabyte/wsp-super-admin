@@ -1,7 +1,6 @@
 "use client";
 
-import { Building2 } from "lucide-react";
-import Image from "next/image";
+import { Building2, Home } from "lucide-react";
 import * as React from "react";
 import {
   Sidebar,
@@ -9,12 +8,14 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { NavMain } from "./nav-main";
 
 // This is sample data.
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { state } = useSidebar();
   const data = {
     user: {
       name: "shadcn",
@@ -23,6 +24,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     },
 
     navMain: [
+      {
+        title: "Dashboard",
+        url: "/",
+        icon: Home,
+        type: "dashboard",
+      },
       {
         title: "Companies",
         url: "/companies",
@@ -34,8 +41,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader className=" flex items-start bg-white">
-        <Image src="/images/logo.png" alt="logo" width={100} height={100} />
+      <SidebarHeader className=" flex items-center pl-4 bg-white text-xl font-extrabold">
+        {state === "expanded" ? "WeSeeShop" : "W"}
       </SidebarHeader>
       <SidebarContent className="!bg-white">
         <React.Suspense fallback={<div>Loading...</div>}>

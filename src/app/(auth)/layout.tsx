@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("adminToken");
       if (token) {
-        router.push("/products?type=products");
+        router.push("/companies");
       }
     }
   }, []);

@@ -43,8 +43,6 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-  type Company,
-  type CompanyAdmin,
   deleteCompany,
   deleteCompanyAdmin,
   getCompanies,
@@ -52,6 +50,7 @@ import {
   toggleCompanyAdminStatus,
   toggleCompanyStatus,
 } from "@/services/superAdminService";
+import type { Company, CompanyAdmin } from "@/types/superAdmin.types";
 
 export default function CompaniesPage() {
   const [activeTab, setActiveTab] = useState("companies");

@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export function ThemeSwitcher() {
   const { setTheme } = useTheme();

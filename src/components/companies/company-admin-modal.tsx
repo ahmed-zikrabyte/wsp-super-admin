@@ -21,14 +21,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
-  type Company,
-  type CompanyAdmin,
-  type CreateCompanyAdminRequest,
   createCompanyAdmin,
   getCompanies,
-  type UpdateCompanyAdminRequest,
   updateCompanyAdmin,
 } from "@/services/superAdminService";
+import type {
+  Company,
+  CompanyAdmin,
+  CreateCompanyAdminRequest,
+  UpdateCompanyAdminRequest,
+} from "@/types/superAdmin.types";
 
 interface CompanyAdminModalProps {
   isOpen: boolean;

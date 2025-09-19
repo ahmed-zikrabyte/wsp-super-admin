@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import type React from "react";
 import { useEffect, useState } from "react";
 import ConfirmationModal from "@/components/global/confirmation-modal";
-import { AppSidebar } from "@/components/sidebar/app-sdiebar";
+import { AppSidebar } from "@/components/global/sidebar/app-sdiebar";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -43,7 +43,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("adminToken");
+      console.log({ token });
       if (!token) {
+        console.log("No token found");
         router.replace("/login");
       } else {
         setIsAuthenticated(true);

@@ -12,10 +12,8 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  type CompanyAdmin,
-  resetCompanyAdminPassword,
-} from "@/services/superAdminService";
+import { resetCompanyAdminPassword } from "@/services/superAdminService";
+import type { CompanyAdmin } from "@/types/superAdmin.types";
 
 interface PasswordResetModalProps {
   isOpen: boolean;

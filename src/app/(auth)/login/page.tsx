@@ -54,7 +54,7 @@ export default function Component() {
     try {
       const response = await login(data.email, data.password);
       localStorage.setItem("adminToken", response.data.token);
-      router.push("/products?type=products");
+      router.push("/companies");
       toast.success(response.message);
     } catch (error: any) {
       toast.error(error.response.data.message || "Failed to login");
